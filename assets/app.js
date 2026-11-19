@@ -27,9 +27,10 @@
       {f:'vertik-sterzhni',s:'left:6vw;top:98vh;width:20vw',   o:.6, d:'-6s'}
     ],
     dorogi:[
-      {f:'doroga-perspektiva', s:'right:6vw;top:1vh;width:60vw',   o:1,  d:'-2s', p:1},
-      {f:'dorozhnaya-odezhda', s:'left:-4vw;top:66vh;width:38vw',  o:.9, d:'-14s',p:0},
-      {f:'samosval',           s:'right:-3vw;top:124vh;width:38vw', o:.85,d:'-8s', p:1}
+      {f:'doroga-perspektiva', s:'right:0vw;top:0vh;width:74vw',   o:1,  d:'-2s', p:1},
+      {f:'dorozhnaya-odezhda', s:'left:-5vw;top:66vh;width:46vw',  o:.9, d:'-14s',p:0},
+      {f:'katok',              s:'right:10vw;top:96vh;width:30vw', o:.85,d:'-10s',p:1},
+      {f:'samosval',           s:'right:-3vw;top:136vh;width:38vw', o:.85,d:'-8s', p:1}
     ],
     prom:[
       {f:'razrez-dd',      s:'right:-5vw;top:1vh;width:38vw',  o:.78,d:'-2s', p:1},
@@ -47,7 +48,7 @@
     index:  {'baza-ankernaya':'0s','baza-plan-1-1':'-7s','sloi-1-4':'-13s'},
     objects:{'plan-etazha':'0s','armirovanie-kolonny':'-8s','vedomost':'-14s'},
     group:  {'izometriya':'0s','razrez-dd':'-7s','vertik-sterzhni':'-13s'},
-    dorogi: {'doroga-perspektiva':'0s','dorozhnaya-odezhda':'-7s','samosval':'-13s'},
+    dorogi: {'doroga-perspektiva':'0s','dorozhnaya-odezhda':'-7s','katok':'-10s','samosval':'-13s'},
     prom:   {'razrez-dd':'0s','vertik-sterzhni':'-6s','sloi-1-4':'-12s'},
     jobs:   {'uzel-2-ugol':'0s','razrez-rostverk':'-8s','grebenka':'-15s'}
   };
