@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#16252A">
+<title>Расчёт стоимости монолитных работ — TesseracT Group</title>
+<meta name="description" content="Предварительный расчёт стоимости монолитных работ: выберите тип объекта, конструкции и что предоставляете сами. Цены по нашим расценкам, с вилкой. Расчёт можно сохранить в PDF.">
+<link rel="canonical" href="https://skadon.ru/calc.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Расчёт стоимости монолитных работ — TesseracT Group">
+<meta property="og:url" content="https://skadon.ru/calc.html">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/masks.css">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/calc-data.js"></script>
+<script src="assets/calc-icons.js"></script>
+<script src="assets/app.js" defer></script>
+<script src="assets/calc.js" defer></script>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="wrap">
+    <div class="brand" id="brand" title="Нажми — перезапустить">
+      <canvas id="logo" width="112" height="112"></canvas>
+      <span class="nm" id="nm"></span>
+    </div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="objects.html">Объекты</a>
+      <a href="group.html">Группа</a>
+      <a href="prom.html">Промышленность</a>
+      <a href="jobs.html">Работа</a>
+      <a href="calc.html" class="cur">Расчёт</a>
+    </nav>
+    <a class="btn btn-solid btn-sm" href="index.html#cta">Обсудить проект</a>
+  </div>
+</header>
+
+<div class="hero wrap rise">
+  <span class="eyebrow">Предварительный расчёт</span>
+  <h1>Стоимость монолитных работ</h1>
+  <p class="lead">Выберите тип объекта и конструкции, укажите зону ответственности сторон. Расчёт выполняется по действующим расценкам компании и сохраняется в PDF.</p>
+</div>
+
+<section class="wrap rise" style="padding-top:20px">
+
+  <div class="cstep">
+    <div class="cnum">1</div>
+    <div class="cbody">
+      <h2>Тип объекта</h2>
+      <p class="chint">На небольших объектах стоимость единицы выше за счёт меньших объёмов и затрат на мобилизацию.</p>
+      <div class="copts" id="objTypes"></div>
+    </div>
+  </div>
+
+  <div class="cstep">
+    <div class="cnum">2</div>
+    <div class="cbody">
+      <h2>Конструкции <span class="csel" id="selN"></span></h2>
+      <p class="chint">Можно выбрать несколько: расчёт выполняется по каждой с суммированием.</p>
+      <div class="cworks" id="works"></div>
+    </div>
+  </div>
+
+  <div class="cstep" id="volsWrap" hidden>
+    <div class="cnum">3</div>
+    <div class="cbody">
+      <h2>Объёмы</h2>
+      <p class="chint">Если объёмы не определены, оставьте поле пустым — будет показана стоимость за единицу.</p>
+      <div class="cvols" id="vols"></div>
+    </div>
+  </div>
+
+  <div class="cstep">
+    <div class="cnum">4</div>
+    <div class="cbody">
+      <h2>Поставка подрядчика</h2>
+      <p class="chint">Отметьте позиции, которые обеспечивает подрядчик. Неотмеченные позиции обеспечивает заказчик, в стоимость они не входят. Отметки применяются ко всем выбранным конструкциям.</p>
+      <div class="cadd" id="addons"></div>
+    </div>
+  </div>
+
+  <div class="cstep">
+    <div class="cnum">5</div>
+    <div class="cbody">
+      <h2>Регион и условия</h2>
+      <div class="crow">
+        <label class="cfield"><span>Регион</span><select id="region"></select></label>
+        <label class="cfield"><span>Расчёт</span>
+          <select id="nds"><option value="0">Без НДС</option><option value="1">С НДС</option></select>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <p class="cempty" id="empty">Выберите конструкции — здесь появится расчёт.</p>
+
+  <div class="cres" id="result" hidden>
+    <div class="cres-main">
+      <div class="cres-head">
+        <span class="eyebrow">Расчёт</span>
+        <span class="cmeta" id="meta"></span>
+      </div>
+      <div class="clines" id="lines"></div>
+      <div class="csum">
+        <span id="sumTitle">Итого по объекту</span>
+        <b id="sum">—</b>
+        <em id="sumHint"></em>
+      </div>
+    </div>
+    <div class="cres-side">
+      <span class="eyebrow">Что входит</span>
+      <ul class="cinc" id="included"></ul>
+      <p class="cnote" id="note"></p>
+      <div class="cacts">
+        <button class="btn btn-solid btn-sm" id="btnPdf" type="button">Скачать PDF</button>
+        <button class="btn btn-ghost btn-sm" id="btnPng" type="button">Сохранить картинкой</button>
+      </div>
+      <p class="cfine">Расчёт формируется на фирменном бланке с датой для передачи на согласование. Обезличенная копия параметров расчёта направляется в компанию для аналитики.</p>
+      <a class="btn btn-solid" href="index.html#cta">Обсудить расчёт</a>
+    </div>
+  </div>
+
+  <p class="note" id="upd"></p>
+</section>
+
+<footer><div class="wrap">
+  <span>ООО «СК АЛЬЯНС» · ИНН 6165239962 · Ростов-на-Дону</span>
+  <span>© 2026 TesseracT Group</span>
+</div></footer>
+</div>
+</body>
+</html>

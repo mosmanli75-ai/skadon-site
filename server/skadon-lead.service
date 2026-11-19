@@ -1,0 +1,30 @@
+[Unit]
+Description=skadon.ru — приём заявок и расчётов
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=skadon
+Group=skadon
+EnvironmentFile=/etc/skadon-lead.env
+ExecStart=/usr/bin/python3 /opt/skadon/lead_service.py
+Restart=always
+RestartSec=3
+StateDirectory=skadon
+WorkingDirectory=/opt/skadon
+
+# ограничения
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/skadon
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target
