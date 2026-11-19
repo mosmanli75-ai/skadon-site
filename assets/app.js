@@ -46,6 +46,7 @@
     index:  {'baza-ankernaya':'0s','baza-plan-1-1':'-7s','sloi-1-4':'-13s'},
     objects:{'plan-etazha':'0s','armirovanie-kolonny':'-8s','vedomost':'-14s'},
     group:  {'izometriya':'0s','razrez-dd':'-7s','vertik-sterzhni':'-13s'},
+    dorogi: {'doroga-perspektiva':'0s'},
     prom:   {'razrez-dd':'0s','vertik-sterzhni':'-6s','sloi-1-4':'-12s'},
     jobs:   {'uzel-2-ugol':'0s','razrez-rostverk':'-8s','grebenka':'-15s'}
   };
