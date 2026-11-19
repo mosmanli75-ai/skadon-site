@@ -2,7 +2,7 @@
 # Однократная установка автовыкладки на сервер. Запуск (с мака):
 #   ssh root@81.177.6.198 'curl -fsSL https://raw.githubusercontent.com/mosmanli75-ai/skadon-site/main/deploy/install.sh | bash'
 set -euo pipefail
-command -v git >/dev/null && command -v rsync >/dev/null || { apt-get update -q && apt-get install -y -q git rsync; }
+command -v git >/dev/null && command -v rsync >/dev/null && command -v curl >/dev/null || { apt-get update -q && apt-get install -y -q git rsync curl; }
 curl -fsSL https://raw.githubusercontent.com/mosmanli75-ai/skadon-site/main/deploy/skadon-pull.sh -o /usr/local/bin/skadon-pull
 chmod 755 /usr/local/bin/skadon-pull
 cat > /etc/systemd/system/skadon-pull.service <<'U'
