@@ -27,7 +27,7 @@
       {f:'vertik-sterzhni',s:'left:6vw;top:98vh;width:20vw',   o:.6, d:'-6s'}
     ],
     dorogi:[
-      {f:'doroga-perspektiva', s:'right:0vw;top:0vh;width:74vw',   o:1,  d:'-2s', p:1},
+      {f:'doroga-perspektiva', s:'right:-6vw;top:9vh;width:88vw',   o:1,  d:'-2s', p:1},
       {f:'dorozhnaya-odezhda', s:'left:-5vw;top:66vh;width:46vw',  o:.9, d:'-14s',p:0},
       {f:'katok',              s:'right:10vw;top:96vh;width:30vw', o:.85,d:'-10s',p:1},
       {f:'samosval',           s:'right:-3vw;top:136vh;width:38vw', o:.85,d:'-8s', p:1}
