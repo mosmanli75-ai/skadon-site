@@ -27,8 +27,9 @@
       {f:'vertik-sterzhni',s:'left:6vw;top:98vh;width:20vw',   o:.6, d:'-6s'}
     ],
     dorogi:[
-      {f:'doroga-perspektiva', s:'right:-4vw;top:12vh;width:48vw',  o:1, d:'-2s', p:1},
-      {f:'dorozhnaya-odezhda', s:'left:-6vw;top:118vh;width:36vw', o:.75, d:'-14s',p:0}
+      {f:'doroga-perspektiva', s:'right:8vw;top:6vh;width:58vw',   o:1,  d:'-2s', p:1},
+      {f:'dorozhnaya-odezhda', s:'left:-5vw;top:104vh;width:40vw', o:.9, d:'-14s',p:0},
+      {f:'samosval',           s:'right:-2vw;top:186vh;width:40vw', o:.8, d:'-8s', p:1}
     ],
     prom:[
       {f:'razrez-dd',      s:'right:-5vw;top:1vh;width:38vw',  o:.78,d:'-2s', p:1},
