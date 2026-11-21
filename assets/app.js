@@ -114,11 +114,11 @@ document.addEventListener('DOMContentLoaded',function(){
 var replayText=null;
 (function(){
   const nm=document.getElementById('nm'); if(!nm) return;
-  const TEXT=nm.dataset.text||'TesseracT Group', HI=nm.dataset.text?-1:8;
+  const TEXT='TesseracT Group';
   const letters=[].map.call(TEXT,function(ch,i){
     const b=document.createElement('b');
     if(ch===' '){b.className='sp';b.innerHTML='&nbsp;';}
-    else{b.textContent=ch; if(i===HI) b.className='hi';}
+    else{b.textContent=ch; if(i===8) b.className='hi';}
     nm.appendChild(b); return b;
   });
   let timers=[];
